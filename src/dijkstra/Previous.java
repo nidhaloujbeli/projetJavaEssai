@@ -1,6 +1,7 @@
 package dijkstra;
 import java.util.ArrayList;
 
+import Exceptions.DijkstraException;
 import Interfaces.VertexInterface;
 
 public class Previous 
@@ -14,10 +15,14 @@ public class Previous
 		father.add(vFather);
 	}
 	
-	public VertexInterface getFatherVertex(VertexInterface v) //Attention Exception reste à définir
+	public VertexInterface getFatherVertex(VertexInterface v) throws DijkstraException
 	{
 		
-			return father.get(vertex.indexOf(v));
+			if(vertex.indexOf(v) != -1)
+				return father.get(vertex.indexOf(v));
+			else
+				throw new DijkstraException("Mauvaise demande d'index dans Previous avec l'appel de getFatherVertex.");
+
 	}
 
 

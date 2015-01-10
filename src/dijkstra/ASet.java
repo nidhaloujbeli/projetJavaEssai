@@ -11,12 +11,12 @@ implements ASetInterface
 	
 	private ArrayList<VertexInterface> a = new ArrayList<VertexInterface>();
 
-	public void addVertex(VertexInterface vertex) 
+	public void add(VertexInterface vertex) 
 	{
 		a.add(vertex);
 	}
 
-	public boolean containsVertex(VertexInterface vertex) 
+	public boolean contains(VertexInterface vertex) 
 	{
 		return a.contains(vertex);
 	}
