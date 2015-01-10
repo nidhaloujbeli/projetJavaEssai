@@ -21,7 +21,7 @@ public class Previous
 			if(vertex.indexOf(v) != -1)
 				return father.get(vertex.indexOf(v));
 			else
-				throw new DijkstraException("Mauvaise demande d'index dans Previous avec l'appel de getFatherVertex.");
+				throw new DijkstraException("Mauvaise demande d'index:Previous: getFatherVertex.");
 
 	}
 
